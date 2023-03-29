@@ -1,0 +1,22 @@
+{
+  "name": "node_hw1",
+  "version": "1.0.0",
+  "description": "node_hw1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stas-0k/goit-node-js-hw-01.git"
+  },
+  "author": "Stas_0k",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stas-0k/goit-node-js-hw-01/issues"
+  },
+  "homepage": "https://github.com/Stas-0k/goit-node-js-hw-01#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
