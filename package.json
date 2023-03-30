@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Stas-0k/goit-node-js-hw-01#readme",
   "dependencies": {
+    "nanoid": "^4.0.2",
     "nodemon": "^2.0.22",
     "yargs": "^17.7.1"
   }

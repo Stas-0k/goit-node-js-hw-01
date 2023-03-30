@@ -1,3 +1,4 @@
+//const { nanoid } = require("node:nanoid");
 const fs = require("fs").promises;
 const path = require("node:path");
 
@@ -27,7 +28,7 @@ async function removeContact(contactId) {
     }
     const result = contacts.filter((_, index) => index !== idx)
     await fs.writeFile(contactsPath, JSON.stringify(result))
-    return contacts
+    return contacts[idx]
 }
 
 async function addContact(name, email, phone) {
@@ -35,7 +36,7 @@ async function addContact(name, email, phone) {
     const newContact = { name, email, phone }
     contacts.push(newContact)
     await fs.writeFile(contactsPath, JSON.stringify(contacts))
-    return contacts
+    return newContact
 }
 
 module.exports = { listContacts, getContactById, removeContact, addContact };

@@ -29,4 +29,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-//invokeAction({action:'add', name:"anna", email:"anna@mail.com", phone:"01001"});
+//invokeAction({action:'remove', id:"qdggE76Jtbfd9eWJHrssH"});
