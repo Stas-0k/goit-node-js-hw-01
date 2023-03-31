@@ -22,13 +22,13 @@ async function getContactById(contactId) {
 
 async function removeContact(contactId) {
     const contacts = await listContacts();
-    const idx = contacts.findIndex(contact => contact.id === contactId)
-    if (!idx) {
-        return null
+    const idx = contacts.findIndex(item=>item.id===contactId);
+    if(!idx){
+        return null;
     }
-    const result = contacts.filter((_, index) => index !== idx)
-    await fs.writeFile(contactsPath, JSON.stringify(result))
-    return contacts[idx]
+    const result = contacts.filter((_,index)=>index!==idx);
+    await fs.writeFile(contactsPath,JSON.stringify(result));
+    return contacts[idx]  
 }
 
 async function addContact(name, email, phone) {

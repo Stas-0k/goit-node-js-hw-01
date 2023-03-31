@@ -6,22 +6,22 @@ async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
           const contacts = await contactsFunc.listContacts()
-          console.log(contacts)
+          console.table(contacts)
       break;
 
     case "get":
           const contact = await contactsFunc.getContactById(id)
-          console.log(contact)
+          console.table(contact)
       break;
 
     case "add":
           const contactsAdd = await contactsFunc.addContact(name, email, phone)
-          console.log(contactsAdd)
+          console.table(contactsAdd)
       break;
 
     case "remove":
           const contactsRemove = await contactsFunc.removeContact(id)
-          console.log(contactsRemove)
+          console.table(contactsRemove)
       break;
 
     default:
@@ -30,3 +30,7 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
+
+
+
+
